@@ -25,6 +25,19 @@ function draw() {
   computerPaddle.shapeColor="white";
   up.shapeColor = "black";
   down.shapeColor = "black";
+  
+  up.depth = playerPaddle.depth;
+  playerPaddle.depth = up.depth + 1;
+  
+  down.depth = playerPaddle.depth;
+  playerPaddle.depth = down.depth + 1;
+  
+  up.depth = computerPaddle.depth;
+  computerPaddle.depth = up.depth + 1;
+  
+  down.depth = computerPaddle.depth;
+  computerPaddle.depth = down.depth + 1;
+  
   textFont("TimesNewRoman");
   if(pong.x > 400 && gameState === "play"){
     comScore = comScore+1;
